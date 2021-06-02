@@ -6,6 +6,8 @@ ifeq (${MACHINE_TYPE}, x86_64)
 endif
 BUILD_DIR	:= ${PWD}/${OS_TYPE}-${MACHINE_TYPE}/bin
 
+export CXX = g++ -std=c++11
+
 all: extractSequences mecatCanu mecat
 
 extractSequences: 
